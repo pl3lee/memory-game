@@ -4,7 +4,7 @@
 
 Check it out: https://pl3lee.github.io/memory-game/
 
-This project is a game that trains your short term memory. It is built using React.
+This project is a game that trains your short term memory. It is built using React. Images taken from https://pingu.fandom.com/wiki/Pingu_Wiki
 
 # Built with
 - HTML
