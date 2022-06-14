@@ -9,7 +9,19 @@ function shuffleArray(array) {
 
 const initialState = {
   clicked: [],
-  characters: ['pingu', 'pinga', 'pingg', 'pingi', 'pingo', 'robby', 'walrus'],
+  characters: [
+    'pingu',
+    'pinga',
+    'pingg',
+    'pingi',
+    'pingo',
+    'robby',
+    'walrus',
+    'mama',
+    'papa',
+    'seagull',
+    'pingj',
+  ],
 };
 
 export const clickStateSlice = createSlice({

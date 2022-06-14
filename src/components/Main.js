@@ -17,7 +17,7 @@ const Main = () => {
     return (
       <div className="main">
         <div className="restart" onClick={restartGame}>
-          Click to restart
+          You lost! Click to restart
         </div>
       </div>
     );

@@ -6,6 +6,10 @@ import pingiImg from '../images/pingi.png';
 import pingoImg from '../images/pingo.png';
 import robbyImg from '../images/robby.png';
 import walrusImg from '../images/walrus.png';
+import mamaImg from '../images/mama.png';
+import papaImg from '../images/papa.png';
+import seagullImg from '../images/seagull.png';
+import pingjImg from '../images/pingj.png';
 import { useSelector, useDispatch } from 'react-redux';
 import { addClicked, shuffleCharacters } from '../redux/clickStateReducer';
 import { lose } from '../redux/scoreReducer';
@@ -38,6 +42,22 @@ const characters = {
   walrus: {
     name: 'Walrus',
     source: walrusImg,
+  },
+  mama: {
+    name: 'Mama',
+    source: mamaImg,
+  },
+  papa: {
+    name: 'Papa',
+    source: papaImg,
+  },
+  seagull: {
+    name: 'Seagull',
+    source: seagullImg,
+  },
+  pingj: {
+    name: 'Pingj',
+    source: pingjImg,
   },
 };
 
