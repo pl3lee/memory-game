@@ -9,6 +9,7 @@
   background-color: #f0f9ff;
   border-radius: 10px;
   gap: 5px;
+  transition: 100ms ease all;
 }
 
 .card > img {
@@ -21,4 +22,8 @@
 .card > div {
   text-align: center;
   font-size: medium;
+}
+
+.card:hover {
+  transform: scale(1.1);
 }

@@ -3,7 +3,7 @@ import PlayArea from './PlayArea';
 import { useSelector, useDispatch } from 'react-redux';
 import { resetLost, setScore } from '../redux/scoreReducer';
 import { resetClicked } from '../redux/clickStateReducer';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 const Main = () => {
   const lost = useSelector((state) => state.score.lost);
   const dispatch = useDispatch();
@@ -16,7 +16,9 @@ const Main = () => {
   if (lost) {
     return (
       <div className="main">
-        <div onClick={restartGame}>Click to restart</div>
+        <div className="restart" onClick={restartGame}>
+          Click to restart
+        </div>
       </div>
     );
   } else {
