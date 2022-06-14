@@ -5,8 +5,13 @@ const Header = () => {
   const highScore = useSelector((state) => state.score.scores.highScore);
   return (
     <div className="header">
-      <div className="instructions">
-        <span class="material-symbols-outlined">help</span> How to play
+      <div
+        className="instructions"
+        onClick={() => {
+          document.querySelector('.modal').classList.remove('closed');
+        }}
+      >
+        <span className="material-symbols-outlined">help</span> How to play
       </div>
       <div className="title">Memory Game</div>
       <div className="score-container">
