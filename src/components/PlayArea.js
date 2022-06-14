@@ -3,12 +3,8 @@ import Card from './Card';
 const PlayArea = () => {
   return (
     <div className="playarea">
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
+      <Card character="pingu" />
+      <Card character="pingi" />
     </div>
   );
 };

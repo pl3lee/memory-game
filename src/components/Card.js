@@ -38,13 +38,17 @@ const characters = {
   },
 };
 
-const Card = () => {
-  return (
+const Card = (props) => {
+  let card = (
     <div className="card">
-      <img src={characters.pingu.source} alt={characters.pingu.name}></img>
-      <div>{characters.pingu.name}</div>
+      <img
+        src={characters[props.character].source}
+        alt={characters[props.character].name}
+      ></img>
+      <div>{characters[props.character].name}</div>
     </div>
   );
+  return card;
 };
 
 export default Card;
