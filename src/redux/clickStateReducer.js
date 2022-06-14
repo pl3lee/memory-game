@@ -22,10 +22,14 @@ export const clickStateSlice = createSlice({
     shuffleCharacters: (state) => {
       shuffleArray(state.characters);
     },
+    resetClicked: (state) => {
+      state.clicked = [];
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { addClicked, shuffleCharacters } = clickStateSlice.actions;
+export const { addClicked, shuffleCharacters, resetClicked } =
+  clickStateSlice.actions;
 
 export default clickStateSlice.reducer;

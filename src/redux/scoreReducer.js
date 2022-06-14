@@ -5,6 +5,7 @@ const initialState = {
     score: 0,
     highScore: 0,
   },
+  lost: false,
 };
 
 export const scoreSlice = createSlice({
@@ -13,6 +14,9 @@ export const scoreSlice = createSlice({
   reducers: {
     addScore: (state, action) => {
       state.scores.score += action.payload;
+      if (state.scores.score > state.scores.highScore) {
+        state.scores.highScore = state.scores.score;
+      }
     },
     minusScore: (state, action) => {
       state.scores.score -= action.payload;
@@ -26,11 +30,24 @@ export const scoreSlice = createSlice({
     resetHighScore: (state) => {
       state.scores.highScore = 0;
     },
+    lose: (state) => {
+      state.lost = true;
+    },
+    resetLost: (state) => {
+      state.lost = false;
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { addScore, minusScore, setScore, setHighScore, resetHighScore } =
-  scoreSlice.actions;
+export const {
+  addScore,
+  minusScore,
+  setScore,
+  setHighScore,
+  resetHighScore,
+  lose,
+  resetLost,
+} = scoreSlice.actions;
 
 export default scoreSlice.reducer;

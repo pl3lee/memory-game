@@ -8,6 +8,8 @@ import robbyImg from '../images/robby.png';
 import walrusImg from '../images/walrus.png';
 import { useSelector, useDispatch } from 'react-redux';
 import { addClicked, shuffleCharacters } from '../redux/clickStateReducer';
+import { lose } from '../redux/scoreReducer';
+import { addScore } from '../redux/scoreReducer';
 const characters = {
   pingu: {
     name: 'Pingu',
@@ -41,9 +43,15 @@ const characters = {
 
 const Card = (props) => {
   const dispatch = useDispatch();
+  const clicked = useSelector((state) => state.clickState.clicked);
   const click = () => {
-    dispatch(shuffleCharacters());
-    dispatch(addClicked(props.character));
+    if (clicked.includes(props.character)) {
+      dispatch(lose());
+    } else {
+      dispatch(shuffleCharacters());
+      dispatch(addClicked(props.character));
+      dispatch(addScore(1));
+    }
   };
   let card = (
     <div className="card" onClick={click}>
